@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+title * {
+    margin: 0.25em 0;
+}
+
+body {
+    background-color: gray;
+}
+
+#pages {
+    display: none;
+}
+
+body.loaded #pages {
+    display: block;
+}
+
+body.loaded #loading {
+    display:none;
+}
+
+.page, #title, #loading, .note_block, .index {
+    border: 1px solid black;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: white;
+}
+
+
+.note_block li, .notes li {
+    margin: 0.2em 2em;
+}
+
+table {
+    table-layout: fixed;
+}
+
+#title, #loading {
+    text-align:center;
+    width:45em;
+}
+.note_block {background-color: #E0E0E0;}
+
+.index {width:45em;}
+
+img
+{
+    width: 100%;
+}
+
+.text
+{
+    padding-left: 1em;
+}
+
+.text p, .lnum p
+{
+    white-space:pre;
+    line-height:1.2;
+}
+
+.lnum
+{
+    color:gray;
+    text-align:right;
+    width: 3em;
+    padding-left: 1em;
+}
+
+span.highlight
+{
+    background-color: yellow;
+    border: 1px solid orange;
+}
+
+tr.formatting{
+    text-align:right;
+}
+
+tr.formatting ul, .index ul
+{
+    /* float:left; */
+    padding: 0.1em;
+    margin-left: 1em;
+    display: inline-block;
+}
+
+tr.formatting li, .index li
+{
+    display: inline-block;
+    vertical-align:top;
+    padding: 0 1em;
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+
+tr.notes td
+{
+    border: 1px black dotted;
+    background-color: #E0E0E0;
+    padding: 0 1em;
+}
+
+
+td.img_ph
+{
+    vertical-align:top;
+}
+
+th {
+    padding: 0.5em;
+}
+
+img {
+    border: gray 1px dotted;
+}
+
+img:hover {
+    border: blue 1px solid;
+}
+
+tr.notes ul{
+    display: none;
+}
+
+.index h1 {padding: 0.5em 0 1em 0;}
