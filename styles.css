@@ -129,3 +129,27 @@ tr.notes ul{
 }
 
 .index h1 {padding: 0.5em 0 1em 0;}
+
+.folded {display:none;}
+
+td.img img {
+    width:auto;
+    max-width:35em;;
+    max-height:52em;
+    margin-left: 4em;
+}
+
+.index table
+{
+    width:100%;
+}
+
+.index td {
+    text-align: left;
+}
+
+.index th
+{
+    width:4em;
+}
+
