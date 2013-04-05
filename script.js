@@ -20,6 +20,7 @@ function standardize_widths() {
     $("td.text").map(test_width);
     var em_size = parseFloat($("body").css("font-size"));
     var text_width =  max_width/em_size;
+    if(text_width > 40) {text_width = 40;}
     $("td.text").width(text_width + "em");
     $("tr.notes ul").width(text_width + 5 + "em");
     image_width = (text_width) + "em";
