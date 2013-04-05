@@ -39,6 +39,17 @@
         <xsl:call-template name="multimicro"/>
       </div>
       <div class="index">
+        <h1>Global Notes</h1>
+        <xsl:for-each select="notes">
+          <div class="note_block"><ul>
+            <xsl:for-each select="note">
+              <li><xsl:value-of select="."/></li>
+            </xsl:for-each>
+          </ul>
+          </div>
+        </xsl:for-each>
+      </div>
+      <div class="index">
         <h1>Page Notes</h1>
         <xsl:call-template name="notes"/>
       </div>
