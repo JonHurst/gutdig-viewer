@@ -38,8 +38,36 @@
         <h1>Multiple microformatting</h1>
         <xsl:call-template name="multimicro"/>
       </div>
+      <div class="index">
+        <h1>Page Notes</h1>
+        <xsl:call-template name="notes"/>
+      </div>
     </body>
   </html>
+</xsl:template>
+
+
+<xsl:template name="notes">
+  <table summary="Pages with macroformatting">
+    <xsl:for-each select="pages/page">
+      <xsl:if test="notes">
+        <tr><th><a class="page_ref">
+          <xsl:attribute name="href">#</xsl:attribute>
+          <xsl:value-of select="@id"/>
+        </a></th>
+          <td>
+            <xsl:for-each select="notes">
+              <ul class="note_block">
+                <xsl:for-each select="note">
+                  <li><xsl:value-of select="."/></li>
+                </xsl:for-each>
+              </ul>
+            </xsl:for-each>
+        </td></tr>
+      <xsl:call-template name="image_row"/>
+      </xsl:if>
+    </xsl:for-each>
+  </table>
 </xsl:template>
 
 
@@ -95,7 +123,7 @@
 
 
 <xsl:template match="tag">
-  <li><xsl:value-of select="."/></li>
+  <li class="tag"><xsl:value-of select="."/></li>
 </xsl:template>
 
 </xsl:stylesheet>

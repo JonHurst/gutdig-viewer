@@ -89,7 +89,7 @@ tr.formatting ul, .index ul
     display: inline-block;
 }
 
-tr.formatting li, .index li
+tr.formatting li, .index li.tag
 {
     display: inline-block;
     vertical-align:top;
