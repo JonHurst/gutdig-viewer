@@ -37,7 +37,12 @@
       <xsl:for-each select="notes">
         <div class="note_block"><ul>
           <xsl:for-each select="note">
-            <li><xsl:value-of select="."/></li>
+            <li>
+              <xsl:if test="@line">
+                <xsl:value-of select="@line"/>
+                <xsl:text>: </xsl:text>
+              </xsl:if>
+            <xsl:value-of select="."/></li>
           </xsl:for-each>
         </ul>
         </div>

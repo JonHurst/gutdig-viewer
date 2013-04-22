@@ -59,7 +59,7 @@
 
 
 <xsl:template name="notes">
-  <table summary="Pages with macroformatting">
+  <table summary="Notes">
     <xsl:for-each select="pages/page">
       <xsl:if test="notes">
         <tr><th><a class="page_ref">
@@ -69,8 +69,12 @@
           <td>
             <xsl:for-each select="notes">
               <ul class="note_block">
-                <xsl:for-each select="note">
-                  <li><xsl:value-of select="."/></li>
+                <xsl:for-each select="note"><li>
+                  <xsl:if test="@line">
+                    <xsl:value-of select="@line"/>
+                    <xsl:text>: </xsl:text>
+                  </xsl:if>
+                  <xsl:value-of select="."/></li>
                 </xsl:for-each>
               </ul>
             </xsl:for-each>
